@@ -15,7 +15,7 @@ document.write("start<br/>");
 
 
 var days;
-days = getDayToShovel(54,15,150);
+days = getDayToShovel(54,15,15);
 document.write(days);
 
 
