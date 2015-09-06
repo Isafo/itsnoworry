@@ -22,11 +22,17 @@
 }
 /*---------------main content---------------------*/
 /*header with img and pressure info*/
+body {
+	font-family: open sans;
+	color: #282828;
+}
+
+/*header with img and pressure info*/
 .topimg {
 	background-image: url("../images/ice.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
-  margin-top: -50px;
+        margin-top: -50px;
 }
 .topheader {
 	height: 40vw;
@@ -38,30 +44,34 @@ div.starter-template.topheader {
 }
 /*small info boxes*/
 .moreinfobox {
+	 background-color: rgba(0, 0, 0, 0.0) !important;
+	/*height: 16vw;*/
+}
+
+.moreinfoboxInner {
 	background-color: #0d2a40;
 	color: white;
 	text-align: center;
 	height: 16vw;
-	opacity: 0.9;
+	opacity: 0.8;
+	margin: 5px;
+	margin-bottom: 0px;
 }
-
-.arrow:after {
-    content:'';
-    position: absolute;
-    top: 100%;
-    left: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 0;
-    height: 0;
-    border-top: solid 20px #0d2a40;
-    border-left: solid 20px transparent;
-    border-right: solid 20px transparent;
-}
-
 .icon {
 	color: #f24c58;
+	padding: 20px;
+	padding-top: 40px;
 }
+/*infobox that covers three rows when displayed on mobile device*/
+/*.threerows {
+	height: 150vw;
+}*/
+.iconimg {
+	width: 30px;
+	margin:20px;
+	margin-top: 40px;
+}
+
 /*infobox that covers three rows when displayed on mobile device*/
 /*.threerows {
 	height: 150vw;
@@ -121,6 +131,41 @@ p {
 }
 /*Font used when displaying live numbers*/
 .otherfont {
-	font-family: bebas neue;
-	font-size: 36px;
+	font-family: oswald;
+	font-size: 26px;
+}
+
+/*---------------slide out info---------------------*/
+.slide {
+	padding: 16vw;
+}
+.slideP i {
+	float: left;
+	padding-left: 0px;
+}
+.slideP img {
+	float: left;
+	margin-left: 0px;
+	margin-bottom: 0px;
+}
+.statsimg {
+	width: 50%;
+	padding: 20px;
+	padding-left: 0;
+        clear:both;
+}
+
+
+.arrow:after {
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0;
+    height: 0;
+    border-top: solid 20px #0d2a40;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
 }
