@@ -20,17 +20,13 @@
 .slide {
   background-color: rgb(255,0,255);
 }
-
-.nav {
-  opacity: 30%;
-}
-
 /*---------------main content---------------------*/
 /*header with img and pressure info*/
 .topimg {
 	background-image: url("../images/ice.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
+  margin-top: -50px;
 }
 .topheader {
 	height: 40vw;
@@ -64,6 +60,11 @@ div.starter-template.topheader {
 	padding: 0 20px 0 20px;
 }
 
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  background: rgba(0, 0, 0, 0.0) !important;
+  text-decoration: underline;
+  color: #F24C58;
+}
 
 /*-------------------text---------------------*/
 h1 {
