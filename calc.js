@@ -1,4 +1,4 @@
-//This file is to be included after getData.php to be usable
+//A file that includes this file must also included getata.php
 
 function whenIsThis($spotInArray){
 	inThisManyHours = 0;
@@ -34,8 +34,7 @@ function parseJSON(arr, pressureBounds) {
 	//How much pressure is there on the roof right now?
 	var pressureNow = getCurrentPressure();
 	var totalPressure = pressureNow;
-        		document.getElementById("hej").innerHTML += "Pressure now is "+pressureNow+" kg";
-
+        
 	var i;
 	for(i = 0; i < arr.timeseries.length; i++) 
 	{
@@ -49,15 +48,12 @@ function parseJSON(arr, pressureBounds) {
 
 			//how much in kg does it snow in a second per square meter in the worst case?
 			var quantityPerSec = arr.timeseries[i].pmax;
-        		document.getElementById("hej").innerHTML += "<br/>Snows for "+hours+" hours with "+quantityPerSec+" kg/m^2/s";
-
+ 
 			//how much does it snow this time intervall?
 			var totalQuantity = quantityPerSec*60*60*hours;
-        		document.getElementById("hej").innerHTML += "<br/>which is "+totalQuantity+" kg";
-
+ 
 			//how much pressure will it be on the roof after this?
 			totalPressure += totalQuantity;
-document.getElementById("hej").innerHTML += "<br/>pressure will be " + totalPressure + " kg";
 
 			//Is this in the warning zone?
 			if(totalPressure >= pressureBounds)
@@ -65,7 +61,6 @@ document.getElementById("hej").innerHTML += "<br/>pressure will be " + totalPres
 				//In how many days is this?
 				var when = whenIsThis(i);
 				var days = when / 24;
-document.getElementById("hej").innerHTML += "<br/>shovel in " + days + " days";
 
 				return days;
 			}
@@ -79,16 +74,13 @@ document.getElementById("hej").innerHTML += "<br/>shovel in " + days + " days";
 
 			//how much in mm does it snow in a second per in the worst case?
 			var quantityPerSec = arr.timeseries[i].pmax;
-        		document.getElementById("hej").innerHTML += "<br/>Snows for "+hours+" hours with "+quantityPerSec+" mm/s";
 
 			//how much does it rain in this time intervall?
 			var totalQuantity = quantityPerSec*60*60*hours;
-        		document.getElementById("hej").innerHTML += "<br/>which is "+totalQuantity+" mm wich is "+totalQuantity/1000+" m";
 
 			//how much pressure will it be on the roof after this?
 			//1 m^3 = 1000 liter
 			totalPressure += totalQuantity/1000;
-document.getElementById("hej").innerHTML += "<br/>pressure will be " + totalPressure + " kg";
 
 			//Is this in the warning zone?
 			if(totalPressure >= pressureBounds)
@@ -96,7 +88,6 @@ document.getElementById("hej").innerHTML += "<br/>pressure will be " + totalPres
 				//In how many days is this?
 				var when = whenIsThis(i);
 				var days = when / 24;
-document.getElementById("hej").innerHTML += "<br/>shovel in " + days + " days";
 
 				return Math.floor(days);
 			}
@@ -120,7 +111,10 @@ function getDayToShovel(lat, lon, pressureBounds, elementID){
 
         		//Parse the objects into variables
         		days = parseJSON(myArr, pressureBounds);
-        		document.getElementById(elementID).innerHTML += "</br>"+days;
+        		if(days == -1)
+        			document.getElementById(elementID).innerHTML = "No Need";
+        		else
+        			document.getElementById(elementID).innerHTML = days + " Days";
     		}
 	}
 

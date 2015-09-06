@@ -17,10 +17,7 @@ require 'getData.php';
 
 <script>
 
-
-var days = 100;
-days = getDayToShovel(54,15,120, "hej");
-
+getDayToShovel(54,15,120, "hej");
 
 </script>
 
