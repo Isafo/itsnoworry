@@ -145,6 +145,11 @@ p {
 	font-size: 26px;
 }
 
+.figures {
+  font-family: oswald;
+  font-size: 16px;
+}
+
 /*---------------slide out info---------------------*/
 .slide {
 	padding: 16vw;
@@ -176,4 +181,14 @@ p {
     border-top: solid 20px #0d2a40;
     border-left: solid 20px transparent;
     border-right: solid 20px transparent;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
 }
