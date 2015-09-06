@@ -4,22 +4,123 @@ $(document).ready(function() {
   $("#statsInfo").hide();
   $("#planInfo").hide();
 
-  $("#stats").click(function() {
-      if(activeInfo == -1)
+  $(".moreinfobox").click(function() {
+      if(activeInfo == -1) {
         $(".slide").show();
+        activeInfo = this.id;
+      }
+      else {
+          $(activeInfo).animate({
+                                  left: '150px',
+             opacity: '1.0'
+          }, 1200, function() {
+          // do something after the animation finishes...
+          });
+      }
 
-      $(".slideP").hide();
-
-      $("#statsInfo").show();
-  });
-
-  $("#plan").click(function() {
-      alert("inne")
-      if(activeInfo == -1)
-        $(".slide").show();
-
-      $(".slideP").hide();
-
-      $("#planInfo").show();
-  });
+      activeInfo = this.id;
+      $("p[id='"+ activeInfo +"Info']").show();
+      scrollToAnchor('slide');
 });
+
+$("#plan").click(function() {
+
+    if(activeInfo == -1) {
+      $(".slide").show();
+      activeInfo = this.id;
+    }
+    else {
+        $(activeInfo).animate({
+                                left: '150px',
+           opacity: '1.0'
+        }, 1200, function() {
+        // do something after the animation finishes...
+        });
+    }
+
+    activeInfo = this.id;
+    $("p[id='"+ activeInfo +"Info']").show();
+    scrollToAnchor('slide');
+});
+
+  $("#curr").click(function() {
+
+      if(activeInfo == -1) {
+        $(".slide").show();
+        activeInfo = this.id;
+      }
+      else {
+          $(activeInfo).animate({
+                                  left: '150px',
+             opacity: '1.0'
+          }, 1200, function() {
+          // do something after the animation finishes...
+          });
+      }
+
+      activeInfo = this.id;
+      $("p[id='"+ activeInfo +"Info']").show();
+      scrollToAnchor('slide');
+  });
+
+  $("#snow").click(function() {
+
+      if(activeInfo == -1) {
+        $(".slide").show();
+        activeInfo = this.id;
+      }
+      else {
+          $(activeInfo).animate({
+                                  left: '150px',
+             opacity: '1.0'
+          }, 1200, function() {
+          // do something after the animation finishes...
+          });
+      }
+
+      activeInfo = this.id;
+      $("p[id='"+ activeInfo +"Info']").show();
+      scrollToAnchor('slide');
+  });
+
+  $("#service").click(function() {
+
+      if(activeInfo == -1) {
+        $(".slide").show();
+        activeInfo = this.id;
+      }
+
+      activeInfo = this.id;
+
+      $("p[id='"+ activeInfo +"Info']").show();
+      $("#serviceInfo").show();
+      scrollToAnchor('slide');
+  });
+
+  $("#setting").click(function() {
+
+      if(activeInfo == -1) {
+        $(".slide").show();
+        activeInfo = this.id;
+      }
+      else {
+          $(activeInfo).animate({
+                                  left: '150px',
+             opacity: '1.0'
+          }, 1200, function() {
+          // do something after the animation finishes...
+          });
+      }
+
+      activeInfo = this.id;
+
+      $("p[id='"+ activeInfo +"Info']").show();
+      scrollToAnchor('slide');
+  });
+
+});
+
+function scrollToAnchor(aid) {
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}
