@@ -3,26 +3,23 @@
 <head>
 <title>Test</title>
 
+<script type="text/javascript" src="calc.js"></script>
+
 <?php
-include 'calc.php';
+require 'getData.php';
 ?>
 
-<script>
-document.write("start<br/>");
-
-
-
-
-
-var days;
-days = getDayToShovel(54,15,15);
-document.write(days);
-
-
-</script>
 </head>
 
 <body>
-slut
+
+<p id="hej"></p>
+
+<script>
+
+getDayToShovel(54,15,120, "hej");
+
+</script>
+
 </body>
 </html>
