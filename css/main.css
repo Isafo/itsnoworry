@@ -13,24 +13,20 @@
   background: rgba(0, 0, 0, 0.0) !important;
 }
 
-.navbar-inverse {
+.navbar {
   border-color: rgba(0, 0, 0, 0.0) !important;
 }
 
 .slide {
   background-color: rgb(255,0,255);
 }
-
-.nav {
-  opacity: 30%;
-}
-
 /*---------------main content---------------------*/
 /*header with img and pressure info*/
 .topimg {
 	background-image: url("../images/ice.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
+  margin-top: -50px;
 }
 .topheader {
 	height: 40vw;
@@ -48,6 +44,21 @@ div.starter-template.topheader {
 	height: 16vw;
 	opacity: 0.9;
 }
+
+.arrow:after {
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0;
+    height: 0;
+    border-top: solid 20px #0d2a40;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+}
+
 .icon {
 	color: #f24c58;
 }
@@ -64,6 +75,29 @@ div.starter-template.topheader {
 	padding: 0 20px 0 20px;
 }
 
+.navbar .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar .navbar-nav>.active>a:hover {
+  background: rgba(0, 0, 0, 0.0) !important;
+  color: #F24C58;
+}
+
+#linknav:hover {
+  color: #E23042;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+#linknav {
+  color: #282828;
+}
+
+.navbar-brand {
+  background-color: #F24C58;
+}
+
+.navbar-brand {
+  color: #FFF;
+  padding: 30px;
+  margin-top:-3px;
+}
 
 /*-------------------text---------------------*/
 h1 {
