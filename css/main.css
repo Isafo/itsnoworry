@@ -44,6 +44,21 @@ div.starter-template.topheader {
 	height: 16vw;
 	opacity: 0.9;
 }
+
+.arrow:after {
+    content:'';
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0;
+    height: 0;
+    border-top: solid 20px #0d2a40;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+}
+
 .icon {
 	color: #f24c58;
 }
