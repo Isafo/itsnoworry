@@ -4,25 +4,21 @@ $(document).ready(function() {
   $("#statsInfo").hide();
   $("#planInfo").hide();
 
+
   $(".moreinfobox").click(function() {
       if(activeInfo == -1) {
         $(".slide").show();
         activeInfo = this.id;
       }
       else {
-          $(activeInfo).animate({
-                                  left: '150px',
-             opacity: '1.0'
-          }, 1200, function() {
-          // do something after the animation finishes...
-          });
+          $(".slideP").hide();
       }
 
       activeInfo = this.id;
-      $("p[id='"+ activeInfo +"Info']").show();
+      $("#"+ activeInfo +"Info").show();
       scrollToAnchor('slide');
 });
-
+/*
 $("#plan").click(function() {
 
     if(activeInfo == -1) {
@@ -39,7 +35,7 @@ $("#plan").click(function() {
     }
 
     activeInfo = this.id;
-    $("p[id='"+ activeInfo +"Info']").show();
+    $("#"+ activeInfo +"Info").show();
     scrollToAnchor('slide');
 });
 
@@ -59,7 +55,7 @@ $("#plan").click(function() {
       }
 
       activeInfo = this.id;
-      $("p[id='"+ activeInfo +"Info']").show();
+      $("#"+ activeInfo +"Info").show();
       scrollToAnchor('slide');
   });
 
@@ -79,7 +75,7 @@ $("#plan").click(function() {
       }
 
       activeInfo = this.id;
-      $("p[id='"+ activeInfo +"Info']").show();
+      $("#"+ activeInfo +"Info").show();
       scrollToAnchor('slide');
   });
 
@@ -92,7 +88,7 @@ $("#plan").click(function() {
 
       activeInfo = this.id;
 
-      $("p[id='"+ activeInfo +"Info']").show();
+      $("#"+ activeInfo +"Info").show();
       $("#serviceInfo").show();
       scrollToAnchor('slide');
   });
@@ -114,10 +110,10 @@ $("#plan").click(function() {
 
       activeInfo = this.id;
 
-      $("p[id='"+ activeInfo +"Info']").show();
+      $("#"+ activeInfo +"Info").show();
       scrollToAnchor('slide');
   });
-
+*/
 });
 
 function scrollToAnchor(aid) {
