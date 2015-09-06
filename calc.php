@@ -1,6 +1,5 @@
 <script>
 
-
 function whenIsThis($spotInArray){
 	inThisManyHours = 0;
 	var i;
@@ -29,18 +28,41 @@ function howLongIsThis(spotInArray){
 		return 12;
 }
 
+function() reqListener() {
+  console.log(this.responseText);
+}
+
+function getCurrentPressure(){
+	var pressureData;
+
+	var oReq = new XMLHttpRequest(); // create request object
+	oReq.onload = function() {
+	  // handle the data
+	  pressureData = this.responseText();
+	  var pressureData1[] = this.responseText();
+	  document.write("getCurrentpressure " + pressureData1 + "<br/>");
+	}
+
+	oReq.open("get", "getData.php", true);
+	oReq.send();
+
+	return pressureData1;
+}
+
 //Parses the values in the object array that we are interested in to variables
 function parseJSON(arr, pressureBounds) {
 
 	//How much pressure is there on the roof right now?
+	document.write("trying getCurrentpressure");
 	var pressureNow = getCurrentPressure();
+	//document.write("Pressure now: " + pressureNow + "<br/>");
 	var totalPressure = pressureNow;
 
 	var i;
 	for(i = 0; i < arr.timeseries.length; i++) 
 	{
-		//will it snow?
-		if(arr.timeseries[i].pcat == 1)
+		//will it snow? 1 = snow, 3 = rain
+		if(arr.timeseries[i].pcat == 3)
 		{
 			//it will snow
 
@@ -68,7 +90,7 @@ function parseJSON(arr, pressureBounds) {
 		}
     }
 
-    return 0;	
+    return -1;	
 }
 
 function getDayToShovel(lat, lon, pressureBounds){
@@ -94,12 +116,4 @@ function getDayToShovel(lat, lon, pressureBounds){
 	return days;
 }
 
-function getCurrentPressure(){
-	return 0;
-}
-
 </script>
-
-<body>
-	calc
-</body>
