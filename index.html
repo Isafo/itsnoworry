@@ -9,17 +9,17 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Starter Template for Bootstrap</title>
+    <title>itsnoworry</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/starter-template.css" rel="stylesheet">
-
-
     <link href="css/main.css" rel="stylesheet">
 
+    <!-- Favicon -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
   </head>
 
@@ -46,44 +46,76 @@
     </nav>
 
     <div class="container">
-
       <div class="starter-template">
-        <h1>Bootstrap starter template</h1>
-        <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+        <h1>PRESSURE</h1>
+        <i class="fa fa-home fa-5x icon"></i>
+        <p class = "otherfont">Low</p>
       </div>
+    </div>
 
-      <div class="noPadding col-xs-6 col-md-8" >
-          <!-- placera de på höger sida -->
-          <div class="noPadding col-lg-3 ">
-              första
-          </div>
-          <div class="noPadding col-lg-3">
-              andra
-          </div>
-          <div class="noPadding col-lg-3">
-              tredje
-          </div>
-          <div class="noPadding col-lg-3">
-              fjärde
-          </div>
-      </div>
 
-      <div class="noPadding col-xs-6 col-md-4">
-          <!-- placera snowstats info -->
-          <div class="noPadding col-lg-6">
-              femte
-          </div>
-          <div class="noPadding col-lg-6">
-              sjätte
-          </div>
-      </div>
-    </div><!-- /.container -->
+    <div class="noPadding col-xs-6 col-md-8" >
+        <!-- placera de på höger sida -->
+        <div class="noPadding col-lg-3 moreinfobox item" id="plan">
+          <h1>SHOVEL PLAN</h1>
+          <img class ="iconimg" src="icons/shovel.svg">
+          <p>4 Days</p>
+        </div>
+        <div class="noPadding col-lg-3 moreinfobox item" id="curr">
+          <h1>CURRENT WEATHER</h1>
+          <p>Snowing</p>
+        </div>
+        <div class="noPadding col-lg-3 moreinfobox item" id="stats">
+          <h1>STATISTICS</h1>
+          <i class="fa fa-bar-chart fa-2x icon"></i>
+        </div>
+        <div class="noPadding col-lg-3 moreinfobox item" id="service">
+          <h1>SERVICE</h1>
+        </div>
+    </div>
 
+    <div class="noPadding col-xs-6 col-md-4">
+        <!-- placera snowstats info -->
+        <div class="noPadding col-lg-6 moreinfobox item" id="snowfall">
+          <h1>SNOWFALL</h1>
+          <img class="iconimg" src="icons/snowflake.svg">
+
+            <h2>Overnight</h2>
+            <p class="otherfont">40</p>
+            <h2>24 Hours</h2>
+           <p class="otherfont">50</p>
+           <h2>7 Days</h2>
+           <p class="otherfont">120</p>
+           <h2>Base</h2>
+           <p class="otherfont">230</p>
+        </div>
+        <div class="noPadding col-lg-6 moreinfobox item" id="settings">
+          <h1>SETTINGS</h1>
+          <i class="fa fa-cog fa-2x icon"></i>
+        </div>
+    </div>
+
+    <div class="slide">
+      <p class="slideP" id="statsInfo">
+        Lorem ipsum dolor sit amet, no habeo convenire qui. An has adversarium deterruisset, case sapientem eloquentiam id his, te quaerendum conclusionemque vis. Et utinam ponderum tractatos nam. Ex vim veritus eligendi erroribus, wisi doctus in per. Nam cu augue vidisse placerat, vel vide fastidii te.
+
+        Odio ornatus pro in. Ut quod minim intellegam cum, cu tantas apeirian duo. An ius hinc noluisse. Usu id pertinax adipiscing, et usu tale natum ferri. Ad quo exerci tempor liberavisse, has id diam dicat, eum natum debitis expetendis no.
+      </p>
+
+      <p class="slideP" id="planInfo">
+        Mundi tamquam in ius, ei usu dicta antiopam similique, pro et tritani persius interpretaris. Mea liber tacimates no. Dolore verear expetendis cu sea. Stet saperet elaboraret id qui, malis movet periculis eu nec. Te choro saperet liberavisse ius, id tation facilis recusabo nec. Dicam nostrum ex vis, minimum hendrerit consectetuer ex vix. Pri at evertitur accommodare, nostrum apeirian id duo, diceret scribentur qui id.
+
+        Vix an sensibus consetetur, vix at augue verterem conclusionemque, ea nam ubique evertitur definiebas. Id sed putant voluptaria. Idque quaestio ad ius. Cu eum nulla assentior liberavisse, est cu officiis senserit tractatos. Ex elitr tollit eleifend pro, cu laudem constituto intellegam mea, ei est nemore gubergren.
+
+        Mnesarchum adipiscing mei ea, mel possim senserit cu. Nec eu vero eligendi scaevola, case justo summo ea mei. Has saperet patrioque an. Ei qui graeci scaevola honestatis. Gloriatur neglegentur ex eum, vis nonumes vivendo iracundia ei.
+      </p>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>s
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/itemHandler.js"></script>
   </body>
 </html>
