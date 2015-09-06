@@ -5,6 +5,7 @@
     padding-left: 0px;
 }
 
+
 .navbar-nav {
   float: right !important;
 }
@@ -17,14 +18,46 @@
   border-color: rgba(0, 0, 0, 0.0) !important;
 }
 
-.slide {
-  background-color: rgb(255,0,255);
+/*---------------navigation---------------------*/
+.navbar-header {
+	padding: 0 20px 0 20px;
 }
+
+.navbar .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar .navbar-nav>.active>a:hover {
+  background: rgba(0, 0, 0, 0.0) !important;
+  color: #F24C58;
+}
+
+#linknav:hover {
+  color: #E23042;
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+#linknav {
+  color: #282828;
+}
+
+.navbar-brand {
+  background-color: #F24C58;
+}
+
+.navbar-brand {
+  color: #FFF;
+  padding: 30px;
+  margin-top:-3px;
+}
+
+
+
 /*---------------main content---------------------*/
-/*header with img and pressure info*/
 body {
 	font-family: open sans;
 	color: #282828;
+}
+.container {
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
 
 /*header with img and pressure info*/
@@ -32,7 +65,7 @@ body {
 	background-image: url("../images/ice.jpg");
 	background-size: 100%;
 	background-repeat: no-repeat;
-        margin-top: -50px;
+  margin-top: -50px;
 }
 .topheader {
 	height: 40vw;
@@ -72,42 +105,6 @@ div.starter-template.topheader {
 	margin-top: 40px;
 }
 
-/*infobox that covers three rows when displayed on mobile device*/
-/*.threerows {
-	height: 150vw;
-}*/
-.iconimg {
-	width: 40px;
-}
-/*---------------navigation---------------------*/
-
-.navbar-header {
-	padding: 0 20px 0 20px;
-}
-
-.navbar .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar .navbar-nav>.active>a:hover {
-  background: rgba(0, 0, 0, 0.0) !important;
-  color: #F24C58;
-}
-
-#linknav:hover {
-  color: #E23042;
-  background-color: rgba(0, 0, 0, 0) !important;
-}
-
-#linknav {
-  color: #282828;
-}
-
-.navbar-brand {
-  background-color: #F24C58;
-}
-
-.navbar-brand {
-  color: #FFF;
-  padding: 30px;
-  margin-top:-3px;
-}
 
 /*-------------------text---------------------*/
 h1 {
@@ -116,8 +113,10 @@ h1 {
 	padding: 40px 0 20px 0;
 }
 .topheader h1 {
-	font-size: 44px;
-	padding: 230px 0 50px 0;
+	padding: 150px 0 50px 0;
+	font-family: oswald;
+	font-weight: 700;
+	font-size: 46px;
 }
 .topheader p {
 	padding-top: 30px;
@@ -129,6 +128,9 @@ h2 {
 p {
 	margin: 0;
 }
+.moreinfobox p {
+	font-size: 12px;
+}
 /*Font used when displaying live numbers*/
 .otherfont {
 	font-family: oswald;
@@ -138,6 +140,7 @@ p {
 /*---------------slide out info---------------------*/
 .slide {
 	padding: 16vw;
+  padding-top: 60px;
 }
 .slideP i {
 	float: left;
@@ -152,15 +155,12 @@ p {
 	width: 50%;
 	padding: 20px;
 	padding-left: 0;
-        clear:both;
 }
-
-
 .arrow:after {
     content:'';
     position: absolute;
-    top: 100%;
-    left: 40%;
+    top: 110.5%;
+    left: 90%;
     margin-left: auto;
     margin-right: auto;
     width: 0;

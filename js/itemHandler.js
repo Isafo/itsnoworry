@@ -3,6 +3,7 @@ $(document).ready(function() {
   $(".slide").hide();
   $("#statsInfo").hide();
   $(".arrow").hide();
+  $(".slideP").hide();
 
   $(".moreinfobox:after").hide();
 
