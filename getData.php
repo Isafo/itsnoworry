@@ -1,24 +1,49 @@
-<!DOCTYPE html>
-<html>
-  <body>
+<?php
 
-    <?php
+//connect to server
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "itsnoworry";
 
-    /* Do some operation here, like talk to the database, the file-session
-    * The world beyond, limbo, the city of shimmers, and Canada.
-    *
-    * AJAX generally uses strings, but you can output JSON, HTML and XML as well.
-    * It all depends on the Content-type header that you send with your AJAX
-    * request. */
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+echo "Connected";
 
-      echo "My first PHP script!";
+//get the latest update from the server
+//later the account will specify an ID of an arduino
+function getLatestPressure($conn){
+    $sql = "SELECT * FROM `pressure` ORDER BY `timeStmp` DESC LIMIT 1";
+    $result = $conn->query($sql);
 
-      echo json_encode(42);
+    if ($result && $result->num_rows > 0) {
+        //we got the data
+        $row = $result->fetch_assoc();
+        return $row["weight"];
+    } else {
+        return -1;
+    }
+}
 
-      $cars = array("Volvo", "BMW", "Toyota");
-      echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
-    ?>
+$pressure = getLatestPressure($conn);
 
-  </html>
-</body>
+?>
+
+<script type="text/javascript">
+
+function getCurrentPressure(){
+
+  var currentPressure = <?php echo getLatestPressure($conn); ?>;
+  //currentPressure is kg on a 0.2 * 0.15 m surface
+  var pressurePerMeter2 = currentPressure /2 *10 /15 * 100;
+
+  return pressurePerMeter2;
+
+}
+
+</script>
