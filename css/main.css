@@ -3,14 +3,90 @@
     margin: 0px !important;
     padding-right: 0px;
     padding-left: 0px;
-
 }
 
-#noPadding {
-    padding: 0px;
-    margin: 0px;
-    padding-right: 0px;
+.navbar-nav {
+  float: right !important;
+}
 
-    padding-left: 0px;
+.navbar{
+  background: rgba(0, 0, 0, 0.0) !important;
+}
 
+.navbar-inverse {
+  border-color: rgba(0, 0, 0, 0.0) !important;
+}
+
+.slide {
+  background-color: rgb(255,0,255);
+}
+
+.nav {
+  opacity: 30%;
+}
+
+/*---------------main content---------------------*/
+/*header with img and pressure info*/
+.topimg {
+	background-image: url("../images/ice.jpg");
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+.topheader {
+	height: 40vw;
+	color: #b6dcc2;
+	color: #282828;
+}
+div.starter-template.topheader {
+	padding: 0px;
+}
+/*small info boxes*/
+.moreinfobox {
+	background-color: #0d2a40;
+	color: white;
+	text-align: center;
+	height: 16vw;
+	opacity: 0.9;
+}
+.icon {
+	color: #f24c58;
+}
+/*infobox that covers three rows when displayed on mobile device*/
+/*.threerows {
+	height: 150vw;
+}*/
+.iconimg {
+	width: 40px;
+}
+/*---------------navigation---------------------*/
+
+.navbar-header {
+	padding: 0 20px 0 20px;
+}
+
+
+/*-------------------text---------------------*/
+h1 {
+	font-size: 14px;
+	margin: 0px;
+	padding: 40px 0 20px 0;
+}
+.topheader h1 {
+	font-size: 44px;
+	padding: 230px 0 50px 0;
+}
+.topheader p {
+	padding-top: 30px;
+}
+h2 {
+	font-size: 12px;
+	margin: 0;
+}
+p {
+	margin: 0;
+}
+/*Font used when displaying live numbers*/
+.otherfont {
+	font-family: bebas neue;
+	font-size: 36px;
 }
